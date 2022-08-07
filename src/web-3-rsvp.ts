@@ -117,5 +117,7 @@ export function handleNewRSVP(event: NewRSVP): void {
     newRSVP.save();
     account.totalRSVPs = integer.increment(account.totalRSVPs);
     account.save();
+    thisEvent.totalRSVPs = integer.increment(thisEvent.totalRSVPs)
+    thisEvent.save()
   }
 }
